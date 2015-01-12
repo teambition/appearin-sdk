@@ -1,5 +1,5 @@
 {
-  "name": "appearin-api",
+  "name": "appearin-sdk",
   "version": "0.0.1",
   "description": "The npm module for the frontend version of the appear.in API. Supports browserify.",
   "browser": "index-browser.js",

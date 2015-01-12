@@ -1,5 +1,5 @@
 var config = {
-    standalone: "AppearinApi"
+    standalone: "AppearIn"
 };
 
 module.exports = function(grunt) {

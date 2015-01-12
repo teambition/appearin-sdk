@@ -2,7 +2,7 @@
 <html>
 <head>
 <title>Testing</title>
-<script src="bin/appearin-api.bundle.js"></script>
+<script src="bin/appearin-sdk.bundle.js"></script>
 </head>
 <body>
 <p id="compatible"></p>
@@ -11,7 +11,7 @@
 <iframe width="800" height="640" id="iframe"></iframe>
 <iframe width="800" height="640" id="iframeId"></iframe>
 <script>
-    var api = new AppearinApi();
+    var api = new AppearIn();
     var webrtcCompatible = document.getElementById("compatible");
     var randomRoomNameElement = document.getElementById("random");
     var iframe = document.getElementById("iframe");

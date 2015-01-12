@@ -1,13 +1,13 @@
-# appear.in API
+# appear.in JavaScript SDK
 
-This is the repository for the appear.in developer API JavaScript source. It's
+This is the repository for the appear.in developer SDK JavaScript source. It's
 available on npm and as a standalone (pending). The files in this repository
-are used for building the standalone,a s well as contain the soruces for the
+are used for building the standalone, as well as contain the soruces for the
 npm package.
 
 You can add this library to your browserify/whatever is cool these days package by doing:
 
-`npm install appearin-api`
+`npm install appearin-sdk`
 
 Alternatively, you can fetch link to the sources directly at the bottom of you body:
 
@@ -28,9 +28,9 @@ To compile the latest sources do `grunt dev`.
 Building for production is done by doing `grunt build`. This will create three files:
 
 ````
-appearin-api.<version>.js
-appearin-api.<version>.min.js
-appearin-api.<version>.min.js.map
+appearin-sdk.<version>.js
+appearin-sdk.<version>.min.js
+appearin-sdk.<version>.min.js.map
 ````
 
 These can be self hosted, and they contain all dependencies necessary.
