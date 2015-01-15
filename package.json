@@ -14,7 +14,7 @@
     "appear.in"
   ],
   "author": "Appear.in Team",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
     "promise": "^6.0.1",
     "browser-request": "^0.3.3"
