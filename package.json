@@ -1,6 +1,6 @@
 {
   "name": "appearin-sdk",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The offical appear.in JavaScript SDK. For usage in browsers only.",
   "browser": "index-browser.js",
   "main": "index-node.js",

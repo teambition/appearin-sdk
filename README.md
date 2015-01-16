@@ -12,7 +12,7 @@ You can add this library to your browserify/whatever is cool these days package 
 
 Alternatively, you can fetch link to the sources directly at the bottom of you body:
 
-`<script src="//developer.appear.in/scripts/appearin-sdk.0.0.1.min.js"></script>`
+`<script src="//developer.appear.in/scripts/appearin-sdk.0.0.3.min.js"></script>`
 
 You can read more on the appear.in API at our [developer pages](https://developer.appear.in).
 
