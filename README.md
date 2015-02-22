@@ -4,6 +4,10 @@ The official appear.in JavaScript SDK, available for browsers.
 
 Release notes can be found at https://developer.appear.in/#sdk-changelog
 
+[![Build Status](https://secure.travis-ci.org/appearin/appearin-sdk.png)](http://travis-ci.org/appearin/appearin-sdk)
+
+[![NPM](https://nodei.co/npm/appearin-sdk.png?stars&downloads&downloadRank)](https://nodei.co/npm/appearin-sdk/) [![NPM](https://nodei.co/npm-dl/appearin-sdk.png?months=6&height=3)](https://nodei.co/npm/appearin-sdk/)
+
 ## Installing
 
 You can add this library to your browserify/whatever is cool these days package by doing:
