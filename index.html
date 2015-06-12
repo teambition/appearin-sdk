@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>Testing</title>
-<script src="bin/appearin-sdk.bundle.js"></script>
-</head>
-<body>
-<p id="compatible"></p>
-<p id="random"></p>
-<p id="generated"></p>
-<iframe width="800" height="640" id="iframe"></iframe>
-<iframe width="800" height="640" id="iframeId"></iframe>
-<script>
-    var api = new AppearIn();
-    var webrtcCompatible = document.getElementById("compatible");
-    var randomRoomNameElement = document.getElementById("random");
-    var iframe = document.getElementById("iframe");
+  <head>
+    <title>Testing</title>
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/thunks/thunks.js"></script>
+    <script src="dist/appearin.js"></script>
+  </head>
+  <body>
+    <p id="compatible"></p>
+    <p id="random"></p>
+    <p id="generated"></p>
+    <iframe width="800" height="640" id="iframe"></iframe>
+    <iframe width="800" height="640" id="iframeId"></iframe>
+    <script>
+      var api = new AppearIn();
+      var webrtcCompatible = document.getElementById("compatible");
+      var randomRoomNameElement = document.getElementById("random");
+      var iframe = document.getElementById("iframe");
 
-    webrtcCompatible.innerHTML = "Is WebRTC compatible: " + api.isWebRtcCompatible();
-    api.getRandomRoomName().then(function (roomName) {
-            randomRoomNameElement.innerHTML = "Random room name: " + roomName;
-            api.addRoomToIframe(iframe, roomName);
-            api.addRoomToElementById("iframeId", roomName + "2");
-    });
-</script>
-</body>
+      webrtcCompatible.innerHTML = "Is WebRTC compatible: " + api.isWebRtcCompatible();
+      api.getRandomRoomName()(function(error, roomName) {
+        randomRoomNameElement.innerHTML = "Random room name: " + roomName;
+        api.addRoomToIframe(iframe, roomName);
+        api.addRoomToElementById("iframeId", roomName + "2");
+      });
+    </script>
+  </body>
 </html>

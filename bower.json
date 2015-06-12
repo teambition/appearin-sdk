@@ -1,0 +1,25 @@
+{
+  "name": "appearin-sdk",
+  "version": "0.0.5",
+  "homepage": "https://github.com/teambition/appearin-sdk",
+  "authors": [
+    "Linghao Li <llh911001@gmail.com>"
+  ],
+  "description": "An appear.in JavaScript SDK, forked from the offical SDK.",
+  "keywords": [
+    "appearin",
+    "webrtc"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.4",
+    "thunks": "~3.3.1"
+  }
+}

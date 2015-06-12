@@ -1,7 +1,7 @@
 'use strict';
 
 describe("AppearIn", function () {
-    var AppearIn = require('./index-browser');
+    var AppearIn = require('./src/appearin');
     var assert = require("assert");
     var appearin;
     var roomName = "/sly-koala";
@@ -26,18 +26,15 @@ describe("AppearIn", function () {
     });
 
     describe("getRandomRoomName", function () {
-        it("should support promises", function (done) {
-            appearin.getRandomRoomName().then(function () { done(); });
-        });
 
         it("should support callbacks", function (done) {
-            appearin.getRandomRoomName(function () {
+            appearin.getRandomRoomName()(function () {
                 done();
             });
         });
 
         it("should return a random room name", function (done) {
-            appearin.getRandomRoomName().then(function (roomName) {
+            appearin.getRandomRoomName()(function (error, roomName) {
                 assert.ok(roomName);
                 assert.ok(typeof roomName === "string");
                 done();
@@ -45,7 +42,7 @@ describe("AppearIn", function () {
         });
 
         it("should return a room name with a leading slash", function (done) {
-            appearin.getRandomRoomName().then(function (roomName) {
+            appearin.getRandomRoomName()(function (error, roomName) {
                 assert.ok(roomName[0] === "/");
                 done();
             });

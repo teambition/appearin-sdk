@@ -14,38 +14,17 @@ module.exports = function(grunt) {
                 force: false,
             },
             all: [
-                'lib/*.js',
+                'src/*.js',
                 'index*.js'
             ]
         },
-        browserify: {
-            dev: {
-                options: {
-                    browserifyOptions: {
-                        standalone: config.standalone
-                    }
-                },
-                src: "<%= pkg.browser %>",
-                dest: "bin/<%= pkg.name %>.bundle.js"
-            },
-            build: {
-                options: {
-                    browserifyOptions: {
-                        standalone: config.standalone
-                    }
-                },
-                src: "<%= pkg.browser %>",
-                dest: "bin/<%= pkg.name %>.<%= pkg.version %>.js"
-            }
-        },
         uglify: {
             options: {
-                sourceMap: true,
                 report: true
             },
             prod: {
-                src: "bin/<%= pkg.name %>.<%= pkg.version %>.js",
-                dest: "bin/<%= pkg.name %>.<%= pkg.version %>.min.js"
+                src: "src/appearin.js",
+                dest: "dist/appearin.js"
             }
         }
     });
@@ -53,12 +32,10 @@ module.exports = function(grunt) {
     // Default task(s).
     grunt.registerTask('dev', [
         'jshint',
-        'browserify:dev'
     ]);
 
     // Build task
     grunt.registerTask('build', [
-        'browserify:build',
         'uglify:prod'
     ]);
 

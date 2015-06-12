@@ -1,6 +1,6 @@
 # appear.in JavaScript SDK
 
-The official appear.in JavaScript SDK, available for browsers.
+The Bower package for official appear.in JavaScript SDK, available for browsers.
 
 Release notes can be found at https://developer.appear.in/#sdk-changelog
 
@@ -10,9 +10,9 @@ Release notes can be found at https://developer.appear.in/#sdk-changelog
 
 ## Installing
 
-You can add this library to your browserify/whatever is cool these days package by doing:
+Install the SDK by doing:
 
-`npm install appearin-sdk`
+`bower install appearin-sdk`
 
 Alternatively, you can fetch link to the sources directly at the bottom of you body:
 
@@ -22,26 +22,35 @@ You can read more on the appear.in API at our [developer pages](https://develope
 
 [Documentation can be found at our developer pages too](https://developer.appear.in/#javascript-sdk-documentation).
 
-# Development
-*This section is only here for those manually going to the GitHub
-repository and want to build/hack it themselves.*
+## Using
+This Bower package depends on jquery and [thunks](https://github.com/thunks/thunks).
 
-The project uses browserify to compile the sources. A test page has been added
-as index.html to verify that the core functionality is working. Hopefully this
-will be replaced by automated tests soon™.
+By doing `bower install` juqery and thunks will be automatically installed, and you should add them to your HTML:
 
-To start off, run `npm install` to fetch dependencies.
+```html
+<head>
+  <script src="bower_components/jquery/dist/jquery.min.js"></script>
+  <script src="bower_components/thunks/thunks.js"></script>
+  <script src="src/appearin.js"></script>
+</head>
+```
 
-To compile the latest sources do `grunt dev`.
+Alternatively, you can use [RequireJS](https://github.com/jrburke/requirejs) to load them.
 
-## Building outside NPM
-Building outside NPM is done by doing `grunt build`. This will create three files:
+## API
 
-````
-appearin-sdk.<version>.js
-appearin-sdk.<version>.min.js
-appearin-sdk.<version>.min.js.map
-````
+This SDK DOES NOT provide Promise API for `appearin.getRandomRoomName` method, that being said,
+you can not use `.then` after calling this method, instead, you should use thunk style callback.
 
-These can be self hosted, and they contain all dependencies necessary,
-including wrapping with browserify-standalone.
+#### appearin.getRandomRoomName
+```javascript
+  appearin.getRandomRoomName()(function(error, roomName){
+    // do something with the roomName
+  })
+```
+
+Besides this, all the other methods are the same with apprear.in official SDK.
+
+## Who's using
+
++ Teambition: https://www.teambition.com
