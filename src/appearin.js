@@ -5,7 +5,7 @@
   else if(typeof define === 'object' && define.amd) define(['jquery', 'thunks'], factory);
   else root.AppearIn = factory(root.jQuery, root.thunks);
 
-}(this, function($, thunks){
+}(typeof window === 'object' ? window : this, function($, thunks){
   'use strict';
 
   var API_URL  = "https://api.appear.in";
@@ -29,12 +29,11 @@
     });
   };
 
-
   function normalizeRoomName(rawName) {
     if (rawName && rawName[0] !== '/') {
       rawName =  '/' + rawName;
     }
-    return rawName.trim().toLowerCase().replace(/\/*$/, '');
+    return ('' + rawName).trim().toLowerCase().replace(/\/*$/, '');
   }
 
   function checkSupportForIce(server) {
@@ -97,7 +96,7 @@
         accept: "application/json, text/plain, */*"
       }
     })(function (error, res) {
-      if (error) throw new Error("Could not get random room name: ", error);
+      if (error) throw error;
       return res.roomName;
     });
   };
