@@ -2,7 +2,7 @@
   'use strict';
 
   if (typeof exports !== 'undefined' ) module.exports = factory(require('jquery'), require('thunks'));
-  else if(typeof define === 'object' && define.amd) define(['jquery', 'thunks'], factory);
+  else if(typeof define === 'function' && define.amd) define(['jquery', 'thunks'], factory);
   else root.AppearIn = factory(root.jQuery, root.thunks);
 
 }(typeof window === 'object' ? window : this, function($, thunks){
