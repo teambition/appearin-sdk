@@ -1,6 +1,6 @@
 {
   "name": "appearin-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "The offical appear.in JavaScript SDK. For usage in browsers only.",
   "browser": "index-browser.js",
   "main": "index-node.js",
@@ -43,6 +43,6 @@
   },
   "dependencies": {
     "jquery": "^2.1.4",
-    "thunks": "^3.3.1"
+    "thunks": "^3.4.2"
   }
 }

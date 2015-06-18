@@ -1,6 +1,6 @@
 {
   "name": "appearin-sdk",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "homepage": "https://github.com/teambition/appearin-sdk",
   "main": "src/appearin.js",
   "authors": [
@@ -20,7 +20,7 @@
     "tests"
   ],
   "dependencies": {
-    "jquery": "~2.1.4",
-    "thunks": "~3.3.1"
+    "jquery": "^2.1.4",
+    "thunks": "^3.4.2"
   }
 }
