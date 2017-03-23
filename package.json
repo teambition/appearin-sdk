@@ -1,5 +1,5 @@
 {
-  "name": "appearin-sdk",
+  "name": "@teambition/appearin-sdk",
   "version": "0.1.2",
   "description": "The offical appear.in JavaScript SDK. For usage in browsers only.",
   "browser": "index-browser.js",
